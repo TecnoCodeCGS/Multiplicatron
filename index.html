@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        #welcome-container {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            background-color: #ffde25;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #2b3f94;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+    <title>MateGame Programming</title>
+</head>
+<body>
+    <div id="welcome-container">
+        <h1>Bienvenido a MathMaster</h1>
+        <button id="start-btn">A Jugar</button>
+    </div>
+    <script>
+        // Agrega la etiqueta de audio para el sonido al hacer clic en "A Jugar"
+        const startSound = new Audio('start.mp3');
+startSound.preload = 'auto';
+
+document.getElementById('start-btn').addEventListener('click', function() {
+    startSound.play();
+    // Redirige a la página del juego después de reproducir el sonido
+    window.location.href = 'problemas.html';
+});
+
+    </script>
+</body>
+</html>
